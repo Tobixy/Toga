@@ -61,8 +61,8 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 PM_START_TEXT = """
-*Heyaa.! {}, I'M Toga ♡*
-*I'M Affiliated With The League Of Villains.*
+*Heyaa.! {}, I'm Nobara ♡*
+*I'M Affiliated With The Hunter Guild.*
 *I'M An Group Management Bot, Built For Weebs.*
 • *Alive Since* - {}
 *Use /help To Go Through My Commands..*
@@ -72,10 +72,10 @@ buttons = [
     [
                         InlineKeyboardButton(
                              text="+Add Me",
-                             url="https://t.me/toga_robot?startgroup=true"),
+                             url="https://t.me/NobarSuperbot?startgroup=true"),
                         InlineKeyboardButton(
                              text="Support",
-                             url="https://t.me/Togasupport"),
+                             url="https://t.me/Hunter_guild"),
                     ],
                   [
                         InlineKeyboardButton(
@@ -83,12 +83,12 @@ buttons = [
                              callback_data="help_back"),
                         InlineKeyboardButton(
                              text="Dev",
-                             url="https://t.me/izuya"),
+                             url="https://t.me/XTheANonymous"),
                     ],
                   [
                         InlineKeyboardButton(
                              text="Global Logs",
-                             url="https://t.me/botslogger"),
+                             url="https://t.me/HunterLogs"),
                     ],
     ]
 
@@ -108,7 +108,7 @@ ABOUT2 = """
 """
 
 ABOUT3 = """
-Hello [{}], My name is *TOGA*. A Powerful Telegram Group Management Bot built to help you manage Group easily.
+Hello [{}], My name is *Nobara*. A Powerful Telegram Group Management Bot built to help you manage Group easily.
 ‣ I can Restrict Users.
 ‣ I can Greet Users with customizable welcome message and even set a group rules
 ‣ I have an advanced Anti-Flood System which will help you to safe group from Spammmer.
@@ -129,7 +129,7 @@ Main commands available :
 For all command use / or !
 """
 
-TOGA_PIC = ""
+TOGA_PIC = "https://telegra.ph/file/413abd3d043a5f222d967.jpg"
 
 TOGA_N_IMG = (
   "",
@@ -138,7 +138,7 @@ TOGA_N_IMG = (
 
 TOGA_VID = ""
 
-PM_PHOTO = "https://telegra.ph/file/839ffd41ee4639bb06122.jpg"
+PM_PHOTO = "https://telegra.ph/file/a784e0d2559691c4cbff0.jpg"
 
 TOGA_DISPACHER_PIC = ""
 
@@ -276,7 +276,7 @@ def start(update: Update, context: CallbackContext):
         first = update.effective_user.full_name
         chat = update.effective_chat.title
         update.effective_message.reply_video(
-                video="https://telegra.ph/file/8421c7d73f44695378042.mp4",
+                video="https://telegra.ph/file/a114d445e52688043dc6f.mp4",
                 caption="Started !‎‎‎‎‎‎‎‎ㅤ",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
@@ -284,10 +284,10 @@ def start(update: Update, context: CallbackContext):
                   [
                        InlineKeyboardButton(
                              text="Support",
-                             url="t.me/Togasupport"),
+                             url="t.me/Hunter_guild"),
                        InlineKeyboardButton(
                              text="Updates",
-                             url="t.me/togaUpdates")
+                             url="t.me/HunterUpdates")
                      ]
                 ]
             ),
@@ -416,8 +416,8 @@ def about_callback_data(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Support", url="t.me/togaspport"),
-                    InlineKeyboardButton(text="Updates", url="t.me/togaUpdates"),
+                    InlineKeyboardButton(text="Support", url="t.me/Hunter_Guild"),
+                    InlineKeyboardButton(text="Updates", url="t.me/Hunter_updates"),
                  ],
                  [
                     InlineKeyboardButton(text="Back", callback_data="toga_")
@@ -439,7 +439,7 @@ def repo_callback_data(update, context):
                 [
                  [
                     InlineKeyboardButton(text="Source Code", url=""),
-                    InlineKeyboardButton(text="Developer", url="t.me/PervertSenpai"),
+                    InlineKeyboardButton(text="Developer", url="t.me/XTheAnonymous"),
                  ],
                  [
                     InlineKeyboardButton(text="Back", callback_data="sumi_")
@@ -467,7 +467,7 @@ def sumi_callback_data(update, context):
                 [
                  [
                     InlineKeyboardButton(text="Guide", callback_data="about_"),
-                    InlineKeyboardButton(text="Developer", url="t.me/PervertSenpai"),
+                    InlineKeyboardButton(text="Developer", url="t.me/XTheAnonymous"),
                  ],
                  [
                     InlineKeyboardButton(text="Support", callback_data="about_"),
