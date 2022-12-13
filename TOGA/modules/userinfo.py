@@ -47,7 +47,7 @@ from TOGA.modules.helper_funcs.chat_status import sudo_plus
 from TOGA.modules.helper_funcs.extraction import extract_user
 from TOGA import telethn
 
-TOGA_STATS_PIC = "https://telegra.ph/file/a1f6fc767b7231387d14b.jpg"
+TOGA_STATS_PIC = "https://telegra.ph/file/3d96fb3dec841af4f9597.jpg"
 
 def no_by_per(totalhp, percentage):
     """
@@ -254,10 +254,10 @@ def info(update: Update, context: CallbackContext):
     else:
         return
 
-    rep = message.reply_text("<code>Yum! Yum! Yum!...</code>", parse_mode=ParseMode.HTML)
+    rep = message.reply_text("<code>Scratching the Database...</code>", parse_mode=ParseMode.HTML)
 
     text = (
-        f"═══「<b>• Villains League Data •</b> 」\n\n"
+        f"═══「<b>• Hunter Guild Data •</b> 」\n\n"
         f"• ID: <code>{user.id}</code>\n"
         f"• First Name: {html.escape(user.first_name)}"
     )
@@ -301,25 +301,25 @@ def info(update: Update, context: CallbackContext):
     disaster_level_present = False
 
     if user.id == OWNER_ID:
-        text += "\n\n⍣ 𝐓𝐎𝐆𝐀’𝐳 𝐂𝐑𝐈𝐌𝐄 𝐏𝐀𝐑𝐓𝐍𝐄𝐑 ! 🦄..."
+        text += "\n\n⍣ The Almighty God..."
         disaster_level_present = True
     elif user.id in DEV_USERS:
-        text += "\n\n⍣ 𝐓𝐎𝐆𝐀’𝐳 𝐂𝐑𝐈𝐌𝐄 𝐏𝐀𝐑𝐓𝐍𝐄𝐑 ! 🦄..."
+        text += "\n\n⍣ Developers Of Silicon Valley XD..."
         disaster_level_present = True
     elif user.id in DRAGONS:
-        text += "\n\n⍣ 𝐄𝐢𝐠𝐡𝐭 𝐏𝐫𝐞𝐜𝐞𝐩𝐭𝐬 𝐨𝐟 𝐃𝐞𝐚𝐭𝐡 🥀 !"
+        text += "\n\n⍣ Some Random Sudo !"
         disaster_level_present = True
     elif user.id in DEMONS:
-        text += "\n\n⍣ 𝐕𝐢𝐥𝐥𝐚𝐧'𝐬 𝐀𝐬𝐬𝐞𝐭𝐬 🖤 !"
+        text += "\n\n⍣ Worthless stuff Maybe some scanner !"
         disaster_level_present = True
     elif user.id in TIGERS:
-        text += "\n\n⍣ 𝐍Ø𝐌𝐔 🦍 ..!"
+        text += "\n\n⍣ User is a Tiger"
         disaster_level_present = True
-    elif user.id == 5163444566:
-        text += "\n\n• MY BRO"
+    elif user.id == 2065590380:
+        text += "\n\n• XD"
         disaster_level_present = True
     elif user.id in WOLVES:
-        text += "\n\n⍣ 𝐐𝐔𝐈𝐑𝐊𝐋𝐄𝐒𝐒 ! 🐣"
+        text += "\n\n⍣  Wolf!"
         disaster_level_present = True
     try:
         user_member = chat.get_member(user.id)
@@ -430,7 +430,7 @@ def set_about_me(update: Update, context: CallbackContext):
 def stats(update, context):
     uptime = datetime.datetime.fromtimestamp(boot_time()).strftime("%Y-%m-%d %H:%M:%S")
     botuptime = get_readable_time((time.time() - StartTime))
-    status = "*═══「 Toga Statistics 」*\n\n"
+    status = "*═══「 Nobara Statistics 」*\n\n"
     status += "*•  System Start time:* " + str(uptime) + "\n"
     uname = platform.uname()
     status += "*•  System:* " + str(uname.system) + "\n"
@@ -450,17 +450,17 @@ def stats(update, context):
         update.effective_message.reply_photo(
             TOGA_STATS_PIC,
             status
-            + "\n*𝔗𝔬𝔤𝔞 𝔖𝔱𝔞𝔱𝔦𝔰𝔱𝔦𝔠𝔰*:\n"
+            + "\n*Nᴏʙᴀʀᴀ Sᴛᴀᴛɪsᴛɪᴄs*:\n"
             + "\n".join([mod.__stats__() for mod in STATS])
-            + f"\n\n[Support](https://t.me/TogaSupport) | [Updates](https://t.me/TogaUpdates)\n\n"
-            + "\n╘══「 by [∆nicade](https://t.me/Anicade) 」\n",
+            + f"\n\n[Support](https://t.me/Hunter_guild) | [Updates](https://t.me/Hunter_Updates)\n\n"
+            + "\n╘══「 by [ΛӨGIЯI](https://t.me/AOGIRI_NETWORK) 」\n",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
                   [                  
                        InlineKeyboardButton(
-                             text="Chat GC",
-                             url="t.me/Anicademia")
+                             text="Tolks",
+                             url="t.me/Anime_chat_folks")
                      ] 
                 ]
             ),
@@ -470,20 +470,20 @@ def stats(update, context):
             (
                 (
                     (
-                        "\n*𝔗𝔬𝔤𝔞 𝔖𝔱𝔞𝔱𝔦𝔰𝔱𝔦𝔠𝔰*:\n"
+                        "\n*Nobara Stats*:\n"
                         + "\n".join(mod.__stats__() for mod in STATS)
                     )
-                    + f"\n\n[Support](https://t.me/togasupport) | [Updates](https://t.me/togaUpdates)\n\n"
+                    + f"\n\n[Support](https://t.me/Hunter_guild) | [Updates](https://t.me/Hunter_Updates)\n\n"
                 )
-                + "══「 by [∆nicade](https://t.me/anicade) 」\n"
+                + "══「 by [ΛӨGIЯI](https://t.me/Aogiri_Network) 」\n"
             ),
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
                   [                  
                        InlineKeyboardButton(
-                             text="Chat GC",
-                             url="t.me/anicademia")
+                             text="Tolkd",
+                             url="t.me/Anime_Chat_folks")
                      ] 
                 ]
             ),
@@ -491,7 +491,7 @@ def stats(update, context):
 
 
 def stats1(update: Update, context: CallbackContext):
-    stats = "🌐 <b>⌈ Current Toga Stats ⌋</b>\n" + "\n".join([mod.__stats__() for mod in STATS])
+    stats = "🌐 <b>⌈ Current Nobara Stats ⌋</b>\n" + "\n".join([mod.__stats__() for mod in STATS])
     result = re.sub(r"(\d+)", r"<code>\1</code>", stats)
     update.effective_message.reply_photo(TOGA_STATS_PIC,caption=result, parse_mode=ParseMode.HTML)
 
