@@ -45,7 +45,7 @@ async def reqgban(_, msg: Message):
     datetimes_fmt = "%d-%m-%Y"
     datetimes = datetime.utcnow().strftime(datetimes_fmt)
 
-    thumb = "https://telegra.ph/file/4be629d34f0c2496a2ec2.png"
+    thumb = "https://telegra.ph/file/3d96fb3dec841af4f9597.jpg"
     
     bug_report = f"""
 **#GbanReq : ** **@{owner_usn}**
@@ -74,7 +74,7 @@ async def reqgban(_, msg: Message):
         if bugs:
             await msg.reply_text(
                 f"<b>Gban Request : {bugs}</b>\n\n"
-                "<b>The gban was successfully requested to the support group @TogaSupport!</b>",
+                "<b>The gban was successfully requested to the support group @Hunter_Guild!</b>",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
