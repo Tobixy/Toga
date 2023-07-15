@@ -43,7 +43,17 @@
          "description": "Get API_HASH from my.telegram.org, used for telethon based modules.",
          "required": true,
          "value": ""
-      },    
+      },
+      "ARQ_API_KEY": {
+        "description": "lol",
+         "required": false,
+          "value": "ZNOTNU-VZJRVP-KBUZJM-LZBVGQ-ARQ"
+      },
+         "ARQ_API_URL": {
+         "discription": "don't change"
+          "required": false
+           "value": "arq.hamker.dev"
+      },
       "REDIS_URL": {
          "description": "Paste your redis url in format redis://<username of admin role>:<password of admin role>@<endoint url>/<database name>. YOU CAN SKIP THIS IF YOU DONT HAVE ONE",
          "required": false,
