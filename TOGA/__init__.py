@@ -241,7 +241,7 @@ requests_session = requests.Session()
 
 #install arq
 print("[INFO]: INITIALIZING ARQ CLIENT")
-arq = ARQ(ARQ_API_URL, ARQ_API_KEY, session=requests_session)
+arq = ARQ(ARQ_API_URL, ARQ_API_KEY, requests_session)
 updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
 telethn = TelegramClient("TOGA", API_ID, API_HASH)
 pbot = Client("TOGA", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
