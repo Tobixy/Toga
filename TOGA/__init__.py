@@ -118,8 +118,8 @@ if ENV:
     REDIS_URL = os.environ.get("REDIS_URL", "")
     OWNER_NAME = os.environ.get("OWNER_NAME", "")
     COTB = ""
-    ARQ_API_KEY = os.eviron.get("ARQ_API_KEY",)"")
-    ARQ_API_URL = os.environ.get("ARQ_API_URL",)"")
+    ARQ_API_KEY = os.eviron.get("ARQ_API_KEY","")
+    ARQ_API_URL = os.environ.get("ARQ_API_URL","")
     UPDATE_CHANNEL = os.environ.get("UPDATE_CHANNEL", "")
     SPT_CLIENT_SECRET = os.environ.get("SPT_CLIENT_SECRET")
     SPT_CLIENT_ID = os.environ.get("SPT_CLIENT_ID")
