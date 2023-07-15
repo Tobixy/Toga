@@ -1,15 +1,14 @@
-
-
 import asyncio
 import os
 import re
 
 import aiofiles
+import requests
 from pykeyboard import InlineKeyboard
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton
 
-from TOGA import pgram, aiohttpsession
+from TOGA import pgram
 from TOGA.utils.errors import capture_err
 from TOGA.utils.pastebin import paste
 
@@ -21,10 +20,10 @@ pattern = re.compile(
 async def isPreviewUp(preview: str) -> bool:
     for _ in range(7):
         try:
-            async with aiohttpsession.head(preview, timeout=2) as resp:
-                status = resp.status
-                size = resp.content_length
-        except asyncio.exceptions.TimeoutError:
+            resp = requests.head(preview, timeout=2)
+            status = resp.status_code
+            size = int(resp.headers.get("content-length", 0))
+        except requests.exceptions.Timeout:
             return False
         if status == 404 or (status == 200 and size == 0):
             await asyncio.sleep(0.4)
@@ -69,7 +68,6 @@ async def paste_func(_, message):
         except Exception:
             pass
     return await m.edit(link)
-
 
 
 __mod_name__ = "Paste"
