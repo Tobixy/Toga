@@ -3,11 +3,11 @@ import os
 import sys
 import time
 import spamwatch
-import aiohttp
+import requests
 import telegram.ext as tg
 from telethon.sessions import StringSession
 from telethon import TelegramClient
-from aiohttp import ClientSession
+from requests import Session as ClientSession
 from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
 from redis import StrictRedis
 from Python_ARQ import ARQ
@@ -235,12 +235,13 @@ pgram = Client(session_name, api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 session = ClientSession()
 
 #install aiohttp session
-print("[INFO]: INITIALZING AIOHTTP SESSION")
-aiohttpsession = ClientSession() 
+print("[INFO]: INITIALIZING REQUESTS SESSION")
+requests_session = requests.Session()
+
 
 #install arq
 print("[INFO]: INITIALIZING ARQ CLIENT")
-arq = ARQ(ARQ_API_URL, ARQ_API_KEY, aiohttpsession)
+arq = ARQ(ARQ_API_URL, ARQ_API_KEY, session=requests_session)
 updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
 telethn = TelegramClient("TOGA", API_ID, API_HASH)
 pbot = Client("TOGA", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
